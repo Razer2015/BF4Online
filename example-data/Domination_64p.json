@@ -1,0 +1,680 @@
+{
+  "lastUpdated": 1727106,
+  "snapshot": {
+    "status": "SUCCESS",
+    "gameId": 36028797039019331,
+    "gameMode": "Domination",
+    "mapVariant": 0,
+    "currentMap": "Levels/MP/MP_Journey/MP_Journey",
+    "maxPlayers": 64,
+    "waitingPlayers": 3,
+    "roundTime": 1469,
+    "defaultRoundTimeMultiplier": 300,
+    "conquest": {
+      "2": {
+        "tickets": 330,
+        "ticketsMax": 1022
+      },
+      "1": {
+        "tickets": 115,
+        "ticketsMax": 1022
+      }
+    },
+    "teamInfo": {
+      "0": {
+        "faction": 0,
+        "players": {}
+      },
+      "1": {
+        "faction": 2,
+        "players": {
+          "1005185772158": {
+            "name": "xSamirZx",
+            "tag": "PERU",
+            "rank": 121,
+            "score": 6489,
+            "kills": 46,
+            "deaths": 8,
+            "squad": 1,
+            "role": 1
+          },
+          "1005712460112": {
+            "name": "Omitto22",
+            "tag": "",
+            "rank": 55,
+            "score": 4874,
+            "kills": 26,
+            "deaths": 32,
+            "squad": 2,
+            "role": 1
+          },
+          "1182805257": {
+            "name": "ProzimEMeuOvo",
+            "tag": "TANK",
+            "rank": 140,
+            "score": 5061,
+            "kills": 36,
+            "deaths": 7,
+            "squad": 0,
+            "role": 1
+          },
+          "351496340": {
+            "name": "LarryX3",
+            "tag": "RIP",
+            "rank": 140,
+            "score": 1868,
+            "kills": 10,
+            "deaths": 17,
+            "squad": 1,
+            "role": 1
+          },
+          "1752291485": {
+            "name": "WineLKrows",
+            "tag": "",
+            "rank": 54,
+            "score": 3677,
+            "kills": 24,
+            "deaths": 21,
+            "squad": 6,
+            "role": 1
+          },
+          "1007730105934": {
+            "name": "Lostkurama009",
+            "tag": "",
+            "rank": 53,
+            "score": 2333,
+            "kills": 10,
+            "deaths": 21,
+            "squad": 5,
+            "role": 1
+          },
+          "1004602758585": {
+            "name": "PATO20000",
+            "tag": "",
+            "rank": 120,
+            "score": 7117,
+            "kills": 36,
+            "deaths": 14,
+            "squad": 5,
+            "role": 1
+          },
+          "914392463": {
+            "name": "Dog2014",
+            "tag": "",
+            "rank": 140,
+            "score": 3879,
+            "kills": 4,
+            "deaths": 8,
+            "squad": 7,
+            "role": 1
+          },
+          "823189313": {
+            "name": "MaToTurvo",
+            "tag": "BAO",
+            "rank": 10,
+            "score": 1912,
+            "kills": 10,
+            "deaths": 14,
+            "squad": 0,
+            "role": 1
+          },
+          "1006939616109": {
+            "name": "lRaro",
+            "tag": "",
+            "rank": 9,
+            "score": 8632,
+            "kills": 54,
+            "deaths": 29,
+            "squad": 1,
+            "role": 1
+          },
+          "1838999821": {
+            "name": "DrLoiron",
+            "tag": "",
+            "rank": 8,
+            "score": 4742,
+            "kills": 27,
+            "deaths": 14,
+            "squad": 6,
+            "role": 1
+          },
+          "1899792699": {
+            "name": "ManteguinhaFox",
+            "tag": "",
+            "rank": 23,
+            "score": 2941,
+            "kills": 10,
+            "deaths": 21,
+            "squad": 5,
+            "role": 1
+          },
+          "1007095409135": {
+            "name": "C4G4_ANDAND0_BR",
+            "tag": "",
+            "rank": 15,
+            "score": 4525,
+            "kills": 22,
+            "deaths": 32,
+            "squad": 7,
+            "role": 1
+          },
+          "1003911720859": {
+            "name": "ogfiuzza",
+            "tag": "",
+            "rank": 101,
+            "score": 10686,
+            "kills": 65,
+            "deaths": 19,
+            "squad": 5,
+            "role": 1
+          },
+          "1006867008353": {
+            "name": "Vinuus",
+            "tag": "",
+            "rank": 2,
+            "score": 2758,
+            "kills": 16,
+            "deaths": 30,
+            "squad": 7,
+            "role": 1
+          },
+          "1966535508": {
+            "name": "SWAGGERrzx",
+            "tag": "",
+            "rank": 21,
+            "score": 2912,
+            "kills": 18,
+            "deaths": 22,
+            "squad": 0,
+            "role": 1
+          },
+          "1133181617": {
+            "name": "IsMackBr0h",
+            "tag": "",
+            "rank": 131,
+            "score": 5668,
+            "kills": 32,
+            "deaths": 11,
+            "squad": 1,
+            "role": 1
+          },
+          "1007204110652": {
+            "name": "vingador50",
+            "tag": "OKD",
+            "rank": 122,
+            "score": 2387,
+            "kills": 16,
+            "deaths": 25,
+            "squad": 6,
+            "role": 1
+          },
+          "1800619347": {
+            "name": "FrancoJ0341",
+            "tag": "",
+            "rank": 113,
+            "score": 1749,
+            "kills": 7,
+            "deaths": 7,
+            "squad": 1,
+            "role": 1
+          },
+          "1836749102": {
+            "name": "jijaja1232",
+            "tag": "",
+            "rank": 135,
+            "score": 3438,
+            "kills": 26,
+            "deaths": 11,
+            "squad": 5,
+            "role": 1
+          },
+          "1003197809427": {
+            "name": "ChupiiinGole",
+            "tag": "",
+            "rank": 3,
+            "score": 808,
+            "kills": 3,
+            "deaths": 8,
+            "squad": 4,
+            "role": 1
+          },
+          "1871196375": {
+            "name": "capacityjoker27",
+            "tag": "",
+            "rank": 76,
+            "score": 1076,
+            "kills": 2,
+            "deaths": 3,
+            "squad": 3,
+            "role": 1
+          },
+          "1055381847": {
+            "name": "ScottTremBala",
+            "tag": "",
+            "rank": 118,
+            "score": 3127,
+            "kills": 25,
+            "deaths": 10,
+            "squad": 3,
+            "role": 1
+          },
+          "1143246595": {
+            "name": "xCOMANDOSBOPEx",
+            "tag": "",
+            "rank": 73,
+            "score": 405,
+            "kills": 3,
+            "deaths": 9,
+            "squad": 4,
+            "role": 1
+          },
+          "998448452": {
+            "name": "Y0NATAN7",
+            "tag": "",
+            "rank": 128,
+            "score": 1413,
+            "kills": 5,
+            "deaths": 9,
+            "squad": 8,
+            "role": 1
+          },
+          "1788493717": {
+            "name": "MattaGringi",
+            "tag": "",
+            "rank": 3,
+            "score": 180,
+            "kills": 0,
+            "deaths": 2,
+            "squad": 3,
+            "role": 1
+          },
+          "1795979784": {
+            "name": "GabPaschoalino",
+            "tag": "",
+            "rank": 101,
+            "score": 1476,
+            "kills": 11,
+            "deaths": 6,
+            "squad": 4,
+            "role": 1
+          },
+          "766808200": {
+            "name": "_ttikonha",
+            "tag": "",
+            "rank": 22,
+            "score": 590,
+            "kills": 2,
+            "deaths": 3,
+            "squad": 6,
+            "role": 1
+          },
+          "1005304429441": {
+            "name": "cassio200",
+            "tag": "",
+            "rank": 12,
+            "score": 370,
+            "kills": 2,
+            "deaths": 3,
+            "squad": 3,
+            "role": 1
+          },
+          "1039770759": {
+            "name": "BLK-Massiota",
+            "tag": "",
+            "rank": 20,
+            "score": 570,
+            "kills": 4,
+            "deaths": 5,
+            "squad": 3,
+            "role": 1
+          },
+          "901940191": {
+            "name": "Viscoch0",
+            "tag": "VsG",
+            "rank": 59,
+            "score": 100,
+            "kills": 1,
+            "deaths": 1,
+            "squad": 2,
+            "role": 1
+          },
+          "1007495848058": {
+            "name": "Rikalisson77",
+            "tag": "",
+            "rank": 40,
+            "score": 0,
+            "kills": 0,
+            "deaths": 0,
+            "squad": 8,
+            "role": 1
+          }
+        }
+      },
+      "2": {
+        "faction": 1,
+        "players": {
+          "1008297539791": {
+            "name": "ROONEY_STEPS",
+            "tag": "",
+            "rank": 63,
+            "score": 0,
+            "kills": 0,
+            "deaths": 0,
+            "squad": 0,
+            "role": 1
+          },
+          "1003824540964": {
+            "name": "ojooao",
+            "tag": "",
+            "rank": 63,
+            "score": 5733,
+            "kills": 27,
+            "deaths": 20,
+            "squad": 3,
+            "role": 1
+          },
+          "909981758": {
+            "name": "Shoguinho",
+            "tag": "",
+            "rank": 140,
+            "score": 13583,
+            "kills": 52,
+            "deaths": 33,
+            "squad": 2,
+            "role": 1
+          },
+          "1007659914922": {
+            "name": "Fabio0111",
+            "tag": "",
+            "rank": 34,
+            "score": 4557,
+            "kills": 29,
+            "deaths": 19,
+            "squad": 4,
+            "role": 1
+          },
+          "1004556591741": {
+            "name": "Bonffaw",
+            "tag": "",
+            "rank": 20,
+            "score": 7635,
+            "kills": 40,
+            "deaths": 16,
+            "squad": 1,
+            "role": 1
+          },
+          "1879843531": {
+            "name": "Possessed20",
+            "tag": "",
+            "rank": 56,
+            "score": 5280,
+            "kills": 26,
+            "deaths": 18,
+            "squad": 3,
+            "role": 1
+          },
+          "1004163421692": {
+            "name": "DarkTula",
+            "tag": "",
+            "rank": 31,
+            "score": 2972,
+            "kills": 16,
+            "deaths": 10,
+            "squad": 5,
+            "role": 1
+          },
+          "1006715725805": {
+            "name": "yan_marcos433",
+            "tag": "",
+            "rank": 123,
+            "score": 5461,
+            "kills": 26,
+            "deaths": 22,
+            "squad": 3,
+            "role": 1
+          },
+          "1814408060": {
+            "name": "Pirocolinooooooo",
+            "tag": "",
+            "rank": 114,
+            "score": 5019,
+            "kills": 26,
+            "deaths": 12,
+            "squad": 5,
+            "role": 1
+          },
+          "1056510377": {
+            "name": "Giuzii2020",
+            "tag": "",
+            "rank": 116,
+            "score": 8195,
+            "kills": 30,
+            "deaths": 27,
+            "squad": 2,
+            "role": 1
+          },
+          "1053981054": {
+            "name": "soomrx",
+            "tag": "",
+            "rank": 5,
+            "score": 4239,
+            "kills": 23,
+            "deaths": 21,
+            "squad": 4,
+            "role": 1
+          },
+          "1854353017": {
+            "name": "cucadelbosco",
+            "tag": "",
+            "rank": 70,
+            "score": 6081,
+            "kills": 32,
+            "deaths": 11,
+            "squad": 5,
+            "role": 1
+          },
+          "1798682927": {
+            "name": "0noreg",
+            "tag": "ZOOM",
+            "rank": 140,
+            "score": 14466,
+            "kills": 80,
+            "deaths": 39,
+            "squad": 2,
+            "role": 1
+          },
+          "1007539586030": {
+            "name": "Relampaguinhos",
+            "tag": "",
+            "rank": 110,
+            "score": 6012,
+            "kills": 25,
+            "deaths": 24,
+            "squad": 2,
+            "role": 1
+          },
+          "1743687998": {
+            "name": "42c903894f0d1542",
+            "tag": "",
+            "rank": 26,
+            "score": 3874,
+            "kills": 26,
+            "deaths": 24,
+            "squad": 5,
+            "role": 1
+          },
+          "250246024": {
+            "name": "faalchioN",
+            "tag": "",
+            "rank": 112,
+            "score": 3511,
+            "kills": 14,
+            "deaths": 12,
+            "squad": 0,
+            "role": 1
+          },
+          "1958051460": {
+            "name": "xMaNiiaC-BoY",
+            "tag": "",
+            "rank": 48,
+            "score": 4142,
+            "kills": 23,
+            "deaths": 10,
+            "squad": 6,
+            "role": 1
+          },
+          "1003504010226": {
+            "name": "kidsbag04",
+            "tag": "",
+            "rank": 111,
+            "score": 7989,
+            "kills": 42,
+            "deaths": 9,
+            "squad": 3,
+            "role": 1
+          },
+          "1742004794": {
+            "name": "hiroshimabr1",
+            "tag": "",
+            "rank": 3,
+            "score": 4113,
+            "kills": 22,
+            "deaths": 26,
+            "squad": 3,
+            "role": 1
+          },
+          "1005487158275": {
+            "name": "Altkkj",
+            "tag": "1237",
+            "rank": 78,
+            "score": 3561,
+            "kills": 7,
+            "deaths": 20,
+            "squad": 4,
+            "role": 1
+          },
+          "1966162662": {
+            "name": "benss0",
+            "tag": "",
+            "rank": 12,
+            "score": 3242,
+            "kills": 15,
+            "deaths": 26,
+            "squad": 6,
+            "role": 1
+          },
+          "1005628134568": {
+            "name": "PHenrique3004",
+            "tag": "",
+            "rank": 107,
+            "score": 4687,
+            "kills": 31,
+            "deaths": 14,
+            "squad": 1,
+            "role": 1
+          },
+          "1004928997889": {
+            "name": "Kuurooii",
+            "tag": "",
+            "rank": 121,
+            "score": 2315,
+            "kills": 6,
+            "deaths": 6,
+            "squad": 1,
+            "role": 1
+          },
+          "1007127828637": {
+            "name": "Kadosh-4",
+            "tag": "",
+            "rank": 72,
+            "score": 2537,
+            "kills": 9,
+            "deaths": 15,
+            "squad": 5,
+            "role": 1
+          },
+          "1003217271948": {
+            "name": "Arthur_n2k",
+            "tag": "",
+            "rank": 67,
+            "score": 6582,
+            "kills": 29,
+            "deaths": 14,
+            "squad": 2,
+            "role": 1
+          },
+          "1805260466": {
+            "name": "joaoVmessias",
+            "tag": "",
+            "rank": 73,
+            "score": 2969,
+            "kills": 14,
+            "deaths": 13,
+            "squad": 1,
+            "role": 1
+          },
+          "1060557873": {
+            "name": "Drewilll",
+            "tag": "",
+            "rank": 0,
+            "score": 1910,
+            "kills": 6,
+            "deaths": 9,
+            "squad": 6,
+            "role": 1
+          },
+          "849869421": {
+            "name": "trudgon",
+            "tag": "M416",
+            "rank": 122,
+            "score": 3095,
+            "kills": 14,
+            "deaths": 7,
+            "squad": 6,
+            "role": 1
+          },
+          "1002995612186": {
+            "name": "LogicVizz",
+            "tag": "",
+            "rank": 38,
+            "score": 2184,
+            "kills": 12,
+            "deaths": 16,
+            "squad": 1,
+            "role": 1
+          },
+          "1004729999584": {
+            "name": "Manzioli777",
+            "tag": "ESA",
+            "rank": 66,
+            "score": 1201,
+            "kills": 5,
+            "deaths": 6,
+            "squad": 6,
+            "role": 1
+          },
+          "1007957385205": {
+            "name": "Agusk077",
+            "tag": "",
+            "rank": 53,
+            "score": 160,
+            "kills": 1,
+            "deaths": 0,
+            "squad": 7,
+            "role": 1
+          },
+          "378254323": {
+            "name": "pro_x_amarela",
+            "tag": "",
+            "rank": 140,
+            "score": 672,
+            "kills": 4,
+            "deaths": 1,
+            "squad": 4,
+            "role": 1
+          }
+        }
+      }
+    }
+  }
+}

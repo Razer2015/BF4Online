@@ -1,0 +1,100 @@
+{
+  "lastUpdated": 1727107,
+  "snapshot": {
+    "status": "SUCCESS",
+    "gameId": 36028797039018428,
+    "gameMode": "AirSuperiority",
+    "mapVariant": 0,
+    "currentMap": "XP1/Levels/XP1_001/XP1_001",
+    "maxPlayers": 24,
+    "waitingPlayers": 0,
+    "roundTime": 376,
+    "defaultRoundTimeMultiplier": 100,
+    "conquest": {
+      "2": {
+        "tickets": 794,
+        "ticketsMax": 800
+      },
+      "1": {
+        "tickets": 794,
+        "ticketsMax": 800
+      }
+    },
+    "teamInfo": {
+      "0": {
+        "faction": 0,
+        "players": {}
+      },
+      "1": {
+        "faction": 0,
+        "players": {
+          "1230056035": {
+            "name": "UnheardDesert",
+            "tag": "",
+            "rank": 60,
+            "score": 290,
+            "kills": 0,
+            "deaths": 1,
+            "squad": 1,
+            "role": 1
+          },
+          "1003929211317": {
+            "name": "SD_PM_DE_BALA",
+            "tag": "COT",
+            "rank": 108,
+            "score": 280,
+            "kills": 0,
+            "deaths": 4,
+            "squad": 1,
+            "role": 1
+          },
+          "1005111939328": {
+            "name": "Neco_Catraca",
+            "tag": "A1r5",
+            "rank": 75,
+            "score": 1636,
+            "kills": 4,
+            "deaths": 1,
+            "squad": 1,
+            "role": 1
+          }
+        }
+      },
+      "2": {
+        "faction": 0,
+        "players": {
+          "1681767936": {
+            "name": "IceyPanda420",
+            "tag": "254",
+            "rank": 111,
+            "score": 1847,
+            "kills": 5,
+            "deaths": 3,
+            "squad": 1,
+            "role": 1
+          },
+          "418833812": {
+            "name": "GazoOriginal",
+            "tag": "",
+            "rank": 134,
+            "score": 486,
+            "kills": 1,
+            "deaths": 5,
+            "squad": 1,
+            "role": 1
+          },
+          "1009205323265": {
+            "name": "kzzdani",
+            "tag": "",
+            "rank": 8,
+            "score": 51,
+            "kills": 0,
+            "deaths": 0,
+            "squad": 1,
+            "role": 1
+          }
+        }
+      }
+    }
+  }
+}

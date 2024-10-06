@@ -1,0 +1,47 @@
+{
+    "lastUpdated": 1727112,
+    "snapshot": {
+        "status": "SUCCESS",
+        "gameId": 18014398529527125,
+        "gameMode": "SquadDeathMatch",
+        "mapVariant": 0,
+        "currentMap": "XP3/Levels/XP3_UrbanGarden/XP3_UrbanGdn",
+        "maxPlayers": 10,
+        "waitingPlayers": 0,
+        "roundTime": 0,
+        "defaultRoundTimeMultiplier": 100,
+        "teamInfo": {
+            "0": {
+                "faction": 0,
+                "players": {}
+            },
+            "1": {
+                "faction": 0,
+                "players": {}
+            },
+            "2": {
+                "faction": 2,
+                "players": {}
+            },
+            "3": {
+                "faction": 0,
+                "players": {
+                    "1004882514602": {
+                        "name": "Kutuzov77",
+                        "tag": "",
+                        "rank": 114,
+                        "score": 0,
+                        "kills": 0,
+                        "deaths": 0,
+                        "squad": 3,
+                        "role": 1
+                    }
+                }
+            },
+            "4": {
+                "faction": 2,
+                "players": {}
+            }
+        }
+    }
+}

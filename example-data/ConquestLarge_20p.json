@@ -1,0 +1,240 @@
+{
+    "lastUpdated": 1728158,
+    "snapshot": {
+        "status": "SUCCESS",
+        "gameId": 18014398529529561,
+        "gameMode": "ConquestLarge",
+        "mapVariant": 0,
+        "currentMap": "XP0/Levels/MP_Subway/XP0_Metro",
+        "maxPlayers": 32,
+        "waitingPlayers": 0,
+        "roundTime": 1606,
+        "defaultRoundTimeMultiplier": 100,
+        "conquest": {
+            "2": {
+                "tickets": 395,
+                "ticketsMax": 1000
+            },
+            "1": {
+                "tickets": 572,
+                "ticketsMax": 1000
+            }
+        },
+        "teamInfo": {
+            "0": {
+                "faction": 0,
+                "players": {}
+            },
+            "1": {
+                "faction": 0,
+                "players": {
+                    "991731196": {
+                        "name": "Cookie_LickerNL",
+                        "tag": "d3th",
+                        "rank": 140,
+                        "score": 11807,
+                        "kills": 45,
+                        "deaths": 21,
+                        "squad": 2,
+                        "role": 1
+                    },
+                    "1006517838135": {
+                        "name": "OldchopperX",
+                        "tag": "",
+                        "rank": 49,
+                        "score": 5796,
+                        "kills": 11,
+                        "deaths": 26,
+                        "squad": 2,
+                        "role": 1
+                    },
+                    "901905038": {
+                        "name": "nautilus_11",
+                        "tag": "",
+                        "rank": 140,
+                        "score": 6803,
+                        "kills": 24,
+                        "deaths": 26,
+                        "squad": 1,
+                        "role": 1
+                    },
+                    "790245429": {
+                        "name": "Brad_PITT_BratMu",
+                        "tag": "d3th",
+                        "rank": 140,
+                        "score": 9827,
+                        "kills": 26,
+                        "deaths": 14,
+                        "squad": 2,
+                        "role": 1
+                    },
+                    "1005336861619": {
+                        "name": "ConeKat",
+                        "tag": "d3th",
+                        "rank": 100,
+                        "score": 9586,
+                        "kills": 20,
+                        "deaths": 22,
+                        "squad": 2,
+                        "role": 1
+                    },
+                    "193049511": {
+                        "name": "SIR_D",
+                        "tag": "d3th",
+                        "rank": 140,
+                        "score": 14089,
+                        "kills": 51,
+                        "deaths": 31,
+                        "squad": 1,
+                        "role": 1
+                    },
+                    "352418766": {
+                        "name": "hinne1911",
+                        "tag": "cB",
+                        "rank": 140,
+                        "score": 307,
+                        "kills": 3,
+                        "deaths": 1,
+                        "squad": 1,
+                        "role": 1
+                    },
+                    "1005109067101": {
+                        "name": "Svensonl123",
+                        "tag": "",
+                        "rank": 1,
+                        "score": 35,
+                        "kills": 0,
+                        "deaths": 0,
+                        "squad": 3,
+                        "role": 1
+                    },
+                    "1008619494873": {
+                        "name": "balagijrey",
+                        "tag": "",
+                        "rank": 0,
+                        "score": 0,
+                        "kills": 0,
+                        "deaths": 0,
+                        "squad": 3,
+                        "role": 1
+                    },
+                    "1006834096231": {
+                        "name": "mousilk",
+                        "tag": "",
+                        "rank": 3,
+                        "score": 0,
+                        "kills": 0,
+                        "deaths": 0,
+                        "squad": 3,
+                        "role": 1
+                    }
+                }
+            },
+            "2": {
+                "faction": 1,
+                "players": {
+                    "352478511": {
+                        "name": "MagDog_thegreat",
+                        "tag": "MEGA",
+                        "rank": 140,
+                        "score": 11660,
+                        "kills": 49,
+                        "deaths": 37,
+                        "squad": 2,
+                        "role": 1
+                    },
+                    "353665933": {
+                        "name": "Zillion01",
+                        "tag": "d3th",
+                        "rank": 140,
+                        "score": 8527,
+                        "kills": 29,
+                        "deaths": 20,
+                        "squad": 2,
+                        "role": 1
+                    },
+                    "364169802": {
+                        "name": "cronsioe",
+                        "tag": "",
+                        "rank": 140,
+                        "score": 8245,
+                        "kills": 31,
+                        "deaths": 22,
+                        "squad": 1,
+                        "role": 1
+                    },
+                    "174518570": {
+                        "name": "omeDisc",
+                        "tag": "Sofa",
+                        "rank": 140,
+                        "score": 6352,
+                        "kills": 18,
+                        "deaths": 23,
+                        "squad": 2,
+                        "role": 1
+                    },
+                    "363081615": {
+                        "name": "Tom_Gravedigger",
+                        "tag": "",
+                        "rank": 140,
+                        "score": 13006,
+                        "kills": 34,
+                        "deaths": 22,
+                        "squad": 1,
+                        "role": 1
+                    },
+                    "348142569": {
+                        "name": "sIsA84cz",
+                        "tag": "CATS",
+                        "rank": 140,
+                        "score": 11782,
+                        "kills": 41,
+                        "deaths": 25,
+                        "squad": 2,
+                        "role": 1
+                    },
+                    "1007411330907": {
+                        "name": "rqmighlfh9or",
+                        "tag": "",
+                        "rank": 126,
+                        "score": 7384,
+                        "kills": 27,
+                        "deaths": 15,
+                        "squad": 1,
+                        "role": 1
+                    },
+                    "1898748173": {
+                        "name": "VeprevAlex",
+                        "tag": "SDG",
+                        "rank": 111,
+                        "score": 2365,
+                        "kills": 6,
+                        "deaths": 7,
+                        "squad": 0,
+                        "role": 1
+                    },
+                    "1009193783827": {
+                        "name": "Zakarpatec",
+                        "tag": "",
+                        "rank": 5,
+                        "score": 0,
+                        "kills": 0,
+                        "deaths": 0,
+                        "squad": 1,
+                        "role": 1
+                    },
+                    "1003872848379": {
+                        "name": "SqdNag1Bayka",
+                        "tag": "",
+                        "rank": 0,
+                        "score": 0,
+                        "kills": 0,
+                        "deaths": 0,
+                        "squad": 0,
+                        "role": 1
+                    }
+                }
+            }
+        }
+    }
+}

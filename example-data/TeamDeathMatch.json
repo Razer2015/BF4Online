@@ -1,0 +1,76 @@
+{
+  "lastUpdated": 1727107,
+  "snapshot": {
+    "status": "SUCCESS",
+    "gameId": 18014398529527530,
+    "gameMode": "TeamDeathMatch",
+    "mapVariant": 0,
+    "currentMap": "Levels/MP/MP_Prison/MP_Prison",
+    "maxPlayers": 32,
+    "waitingPlayers": 0,
+    "roundTime": 773,
+    "defaultRoundTimeMultiplier": 100,
+    "deathmatch": {
+      "2": {
+        "kills": 0,
+        "killsMax": 200
+      },
+      "4": {
+        "kills": 0,
+        "killsMax": 200
+      },
+      "1": {
+        "kills": 0,
+        "killsMax": 200
+      },
+      "3": {
+        "kills": 0,
+        "killsMax": 200
+      }
+    },
+    "teamInfo": {
+      "0": {
+        "faction": 0,
+        "players": {}
+      },
+      "1": {
+        "faction": 0,
+        "players": {
+          "247441000": {
+            "name": "G0P0STAL",
+            "tag": "GMH",
+            "rank": 140,
+            "score": 0,
+            "kills": 0,
+            "deaths": 0,
+            "squad": 1,
+            "role": 1
+          }
+        }
+      },
+      "2": {
+        "faction": 1,
+        "players": {
+          "393428224": {
+            "name": "StierlitZ-RF1",
+            "tag": "",
+            "rank": 112,
+            "score": 0,
+            "kills": 0,
+            "deaths": 0,
+            "squad": 1,
+            "role": 1
+          }
+        }
+      },
+      "3": {
+        "faction": 0,
+        "players": {}
+      },
+      "4": {
+        "faction": 1,
+        "players": {}
+      }
+    }
+  }
+}

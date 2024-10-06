@@ -1,0 +1,110 @@
+{
+    "lastUpdated": 1728208,
+    "snapshot": {
+        "status": "SUCCESS",
+        "gameId": 36028797039021713,
+        "gameMode": "CarrierAssaultLarge",
+        "mapVariant": 0,
+        "currentMap": "XP2/Levels/XP2_002/XP2_002",
+        "maxPlayers": 64,
+        "waitingPlayers": 0,
+        "roundTime": 539,
+        "defaultRoundTimeMultiplier": 300,
+        "carrierAssault": {
+            "2": {
+                "destroyedCrates": 0,
+                "carrierHealth": 100
+            },
+            "1": {
+                "destroyedCrates": 0,
+                "carrierHealth": 79
+            }
+        },
+        "teamInfo": {
+            "0": {
+                "faction": 0,
+                "players": {}
+            },
+            "1": {
+                "faction": 0,
+                "players": {
+                    "133701": {
+                        "name": "FireFoxCosworth",
+                        "tag": "",
+                        "rank": 140,
+                        "score": 0,
+                        "kills": 0,
+                        "deaths": 0,
+                        "squad": 1,
+                        "role": 1
+                    },
+                    "133703": {
+                        "name": "Auwa90",
+                        "tag": "",
+                        "rank": 140,
+                        "score": 0,
+                        "kills": 0,
+                        "deaths": 0,
+                        "squad": 1,
+                        "role": 1
+                    },
+                    "133705": {
+                        "name": " Sion_PhD",
+                        "tag": "GePu",
+                        "rank": 140,
+                        "score": 0,
+                        "kills": 0,
+                        "deaths": 0,
+                        "squad": 1,
+                        "role": 1
+                    }
+                }
+            },
+            "2": {
+                "faction": 2,
+                "players": {
+                    "133700": {
+                        "name": "xXManticorXx",
+                        "tag": "",
+                        "rank": 140,
+                        "score": 0,
+                        "kills": 0,
+                        "deaths": 0,
+                        "squad": 1,
+                        "role": 1
+                    },
+                    "133702": {
+                        "name": "yuvalitai101",
+                        "tag": "",
+                        "rank": 140,
+                        "score": 0,
+                        "kills": 0,
+                        "deaths": 0,
+                        "squad": 1,
+                        "role": 1
+                    },
+                    "133704": {
+                        "name": "ASTABOHNE",
+                        "tag": "",
+                        "rank": 140,
+                        "score": 0,
+                        "kills": 0,
+                        "deaths": 0,
+                        "squad": 1,
+                        "role": 1
+                    },
+                    "926667615": {
+                        "name": "arveduj",
+                        "tag": "",
+                        "rank": 140,
+                        "score": 650,
+                        "kills": 0,
+                        "deaths": 1,
+                        "squad": 1,
+                        "role": 1
+                    }
+                }
+            }
+        }
+    }
+}

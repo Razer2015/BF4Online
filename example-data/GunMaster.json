@@ -1,0 +1,152 @@
+{
+  "lastUpdated": 1727107,
+  "snapshot": {
+    "status": "SUCCESS",
+    "gameId": 36028797039019404,
+    "gameMode": "GunMaster",
+    "mapVariant": 0,
+    "currentMap": "Levels/MP/MP_Prison/MP_Prison",
+    "maxPlayers": 32,
+    "waitingPlayers": 0,
+    "roundTime": 1400,
+    "defaultRoundTimeMultiplier": 100,
+    "gunmaster": {
+      "1007092711611_level": 9,
+      "1008099707539_level": 1,
+      "383530786_level": 2,
+      "1003850458213_level": 3,
+      "1860602410_level": 14,
+      "1677055417_level": 1,
+      "1006045848804_level": 1,
+      "max_level": 17,
+      "1783841377_level": 1,
+      "354160029_level": 16,
+      "805937950_level": 8
+    },
+    "teamInfo": {
+      "0": {
+        "faction": 0,
+        "players": {
+          "1008099707539": {
+            "name": "Ianzovs",
+            "tag": "",
+            "rank": 23,
+            "score": 0,
+            "kills": 0,
+            "deaths": 0,
+            "squad": 0,
+            "role": 1
+          }
+        }
+      },
+      "1": {
+        "faction": 0,
+        "players": {
+          "805937950": {
+            "name": "LEJEROME16",
+            "tag": "515",
+            "rank": 118,
+            "score": 2026,
+            "kills": 14,
+            "deaths": 20,
+            "squad": 1,
+            "role": 1
+          },
+          "1860602410": {
+            "name": "vinicius15464846",
+            "tag": "",
+            "rank": 31,
+            "score": 3541,
+            "kills": 26,
+            "deaths": 26,
+            "squad": 1,
+            "role": 1
+          },
+          "1006045848804": {
+            "name": "PikaOuPal",
+            "tag": "",
+            "rank": 41,
+            "score": 0,
+            "kills": 0,
+            "deaths": 1,
+            "squad": 1,
+            "role": 1
+          },
+          "1677055417": {
+            "name": "m35156102",
+            "tag": "",
+            "rank": 41,
+            "score": 100,
+            "kills": 1,
+            "deaths": 1,
+            "squad": 1,
+            "role": 1
+          },
+          "1783841377": {
+            "name": "whatthehey555",
+            "tag": "",
+            "rank": 98,
+            "score": 0,
+            "kills": 0,
+            "deaths": 0,
+            "squad": 2,
+            "role": 1
+          }
+        }
+      },
+      "2": {
+        "faction": 1,
+        "players": {
+          "354160029": {
+            "name": "tinafa16",
+            "tag": "",
+            "rank": 120,
+            "score": 4126,
+            "kills": 30,
+            "deaths": 20,
+            "squad": 1,
+            "role": 1
+          },
+          "1007092711611": {
+            "name": "felipevaxman",
+            "tag": "",
+            "rank": 105,
+            "score": 2206,
+            "kills": 16,
+            "deaths": 14,
+            "squad": 1,
+            "role": 1
+          },
+          "1003850458213": {
+            "name": "AlexanderLima",
+            "tag": "",
+            "rank": 82,
+            "score": 565,
+            "kills": 4,
+            "deaths": 6,
+            "squad": 1,
+            "role": 1
+          },
+          "383530786": {
+            "name": "antony16000",
+            "tag": "515",
+            "rank": 116,
+            "score": 275,
+            "kills": 2,
+            "deaths": 0,
+            "squad": 1,
+            "role": 1
+          }
+        }
+      },
+      "3": {
+        "faction": 0,
+        "players": {}
+      },
+      "4": {
+        "faction": 1,
+        "players": {}
+      }
+    }
+  }
+}

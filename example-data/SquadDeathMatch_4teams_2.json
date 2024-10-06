@@ -1,0 +1,138 @@
+{
+    "lastUpdated": 1728166,
+    "snapshot": {
+        "status": "SUCCESS",
+        "gameId": 36028797039021508,
+        "gameMode": "SquadDeathMatch",
+        "mapVariant": 0,
+        "currentMap": "Levels/MP/MP_Resort/MP_Resort",
+        "maxPlayers": 10,
+        "waitingPlayers": 0,
+        "roundTime": 1080,
+        "defaultRoundTimeMultiplier": 50,
+        "deathmatch": {
+            "2": {
+                "kills": 10,
+                "killsMax": 75
+            },
+            "4": {
+                "kills": 4,
+                "killsMax": 75
+            },
+            "1": {
+                "kills": 15,
+                "killsMax": 75
+            },
+            "3": {
+                "kills": 11,
+                "killsMax": 75
+            }
+        },
+        "teamInfo": {
+            "0": {
+                "faction": 0,
+                "players": {}
+            },
+            "1": {
+                "faction": 0,
+                "players": {
+                    "362709438": {
+                        "name": "Nightshadow_LB",
+                        "tag": "HDH",
+                        "rank": 140,
+                        "score": 1217,
+                        "kills": 9,
+                        "deaths": 6,
+                        "squad": 1,
+                        "role": 1
+                    },
+                    "1009134340647": {
+                        "name": "tischler38",
+                        "tag": "",
+                        "rank": 12,
+                        "score": 1120,
+                        "kills": 7,
+                        "deaths": 3,
+                        "squad": 1,
+                        "role": 1
+                    }
+                }
+            },
+            "2": {
+                "faction": 2,
+                "players": {
+                    "356963113": {
+                        "name": "oldvet1947",
+                        "tag": "SKS",
+                        "rank": 140,
+                        "score": 920,
+                        "kills": 5,
+                        "deaths": 3,
+                        "squad": 2,
+                        "role": 1
+                    },
+                    "324460211": {
+                        "name": "LuiLoc",
+                        "tag": "",
+                        "rank": 119,
+                        "score": 1150,
+                        "kills": 6,
+                        "deaths": 3,
+                        "squad": 2,
+                        "role": 1
+                    }
+                }
+            },
+            "3": {
+                "faction": 0,
+                "players": {
+                    "782655863": {
+                        "name": "deadpool3372",
+                        "tag": "",
+                        "rank": 138,
+                        "score": 1032,
+                        "kills": 7,
+                        "deaths": 7,
+                        "squad": 3,
+                        "role": 1
+                    },
+                    "1003289420348": {
+                        "name": "Scullhdh",
+                        "tag": "HDH",
+                        "rank": 97,
+                        "score": 750,
+                        "kills": 6,
+                        "deaths": 6,
+                        "squad": 3,
+                        "role": 1
+                    }
+                }
+            },
+            "4": {
+                "faction": 2,
+                "players": {
+                    "1025075243": {
+                        "name": "Moose1948",
+                        "tag": "SKS",
+                        "rank": 140,
+                        "score": 275,
+                        "kills": 2,
+                        "deaths": 6,
+                        "squad": 4,
+                        "role": 1
+                    },
+                    "778823969": {
+                        "name": "Stowe1959",
+                        "tag": "SKS",
+                        "rank": 140,
+                        "score": 400,
+                        "kills": 3,
+                        "deaths": 4,
+                        "squad": 4,
+                        "role": 1
+                    }
+                }
+            }
+        }
+    }
+}

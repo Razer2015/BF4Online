@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <base href="http://localhost:3000/public/" />
+    <link rel="stylesheet" type="text/css" href="bf4.css" />
+    <link rel="stylesheet" type="text/css" href="bf4-static.css" />
+    <link rel="stylesheet" type="text/css" href="battlelog.css" />
+    <link rel="stylesheet" type="text/css" href="own.css" />
+    <style>
+      #server-players-list {
+        width: 100%;
+        height: auto;
+        min-width: 1920px;
+        padding: 16px;
+      }
+      .rank_icon.small {
+        background-image: url(profile/warsaw/gamedata/rank_icon/small@2x.png);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="server-players-list" data-livescore="false">
+      <div>
+        <surf:container id="serverbrowser-scoreboard">
+          <div id="live-header" class="box">
+            <div class="box-content center-text uppercase custom-font-size">
+              {{matchInfo}}
+            </div>
+          </div>
+          <div class="row">
+            {{#each data.teams}}
+            <div
+              class="{{#if (gt @root.data.teams 1)}}half-container{{else}}full-container{{/if}} custom-font-size"
+            >
+              <table class="table table-hover scoreboard" cellpadding="0">
+                <thead>
+                  <tr
+                    class="{{#if (eq @index 0)}}tr-color-allied{{else}}tr-color-enemy{{/if}}"
+                  >
+                    <th colspan="2">{{localizedTeamInfo @root.data }}</th>
+                    <th class="center">K</th>
+                    <th class="center">D</th>
+                    <th class="last right">{{ localizedPoints @root.data }}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {{#each players}}
+                  <tr
+                    class="battlereport-teamstats-row pos_nr{{inc @index}} player"
+                  >
+                    <td class="center">
+                      <span>{{inc @index}}</span>
+                    </td>
+                    <td class="soldier-name">
+                      <div class="user-personarank">
+                        <div
+                          class="bf4-rank rank small r{{rank}} rank_icon"
+                          data-rank="{{rank}}"
+                        ></div>
+                      </div>
+                      <div class="user-info">
+                        <div class="common-playername-personaname wide solo">
+                          <span class="common-playername-personaname-nolink"
+                            >{{name}}</span
+                          >
+                        </div>
+                      </div>
+                    </td>
+                    <td class="center">{{kills}}</td>
+                    <td class="center">{{deaths}}</td>
+                    {{#if gunMasterLevel}}
+                    <td class="last right">{{gunMasterLevel}}</td>
+                    {{else}}
+                    <td class="last right">{{formatNumber score}}</td>
+                    {{/if}}
+                  </tr>
+                  {{/each}}
+                </tbody>
+                {{#if (showFooter @root.data) }}
+                <tfoot>
+                  <tr>
+                    <td colspan="2">Total</td>
+                    <td class="center">{{teamKills}}</td>
+                    <td class="center">{{teamDeaths}}</td>
+                    <td class="right">{{teamScore}}</td>
+                  </tr>
+                </tfoot>
+                {{/if}}
+              </table>
+            </div>
+            {{/each}}
+          </div>
+        </surf:container>
+      </div>
+    </div>
+  </body>
+</html>

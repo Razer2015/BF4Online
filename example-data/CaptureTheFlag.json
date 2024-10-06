@@ -1,0 +1,82 @@
+{
+    "lastUpdated": 1728208,
+    "snapshot": {
+        "status": "SUCCESS",
+        "gameId": 18014398529529651,
+        "gameMode": "CaptureTheFlag",
+        "mapVariant": 0,
+        "currentMap": "XP0/Levels/XP1_002_Oman/XP0_Oman",
+        "maxPlayers": 32,
+        "waitingPlayers": 0,
+        "roundTime": 2044,
+        "defaultRoundTimeMultiplier": 300,
+        "captureTheFlag": {
+            "2": {
+                "flagsMax": 2,
+                "roundTimeMax": 0,
+                "flags": 0
+            },
+            "1": {
+                "flagsMax": 2,
+                "roundTimeMax": 0,
+                "flags": 0
+            }
+        },
+        "teamInfo": {
+            "0": {
+                "faction": 0,
+                "players": {}
+            },
+            "1": {
+                "faction": 0,
+                "players": {
+                    "133701": {
+                        "name": "RedoX-FPS",
+                        "tag": "",
+                        "rank": 140,
+                        "score": 0,
+                        "kills": 0,
+                        "deaths": 0,
+                        "squad": 1,
+                        "role": 1
+                    },
+                    "133703": {
+                        "name": "Junglebasher",
+                        "tag": "",
+                        "rank": 140,
+                        "score": 0,
+                        "kills": 0,
+                        "deaths": 0,
+                        "squad": 1,
+                        "role": 1
+                    }
+                }
+            },
+            "2": {
+                "faction": 1,
+                "players": {
+                    "133700": {
+                        "name": " SMOOTHYonPC",
+                        "tag": "M",
+                        "rank": 140,
+                        "score": 0,
+                        "kills": 0,
+                        "deaths": 0,
+                        "squad": 1,
+                        "role": 1
+                    },
+                    "133702": {
+                        "name": "Wark2011",
+                        "tag": "",
+                        "rank": 140,
+                        "score": 0,
+                        "kills": 0,
+                        "deaths": 0,
+                        "squad": 1,
+                        "role": 1
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,70 @@
+{
+    "lastUpdated": 1728222,
+    "snapshot": {
+        "status": "SUCCESS",
+        "gameId": 36028797039021545,
+        "gameMode": "Elimination",
+        "mapVariant": 0,
+        "currentMap": "XP3/Levels/XP3_Waterfront/XP3_WtrFront",
+        "maxPlayers": 32,
+        "waitingPlayers": 0,
+        "roundTime": 0,
+        "defaultRoundTimeMultiplier": 300,
+        "teamInfo": {
+            "0": {
+                "faction": 0,
+                "players": {}
+            },
+            "1": {
+                "faction": 0,
+                "players": {
+                    "133701": {
+                        "name": "vv---Lion---vv",
+                        "tag": "",
+                        "rank": 140,
+                        "score": 0,
+                        "kills": 0,
+                        "deaths": 0,
+                        "squad": 1,
+                        "role": 1
+                    },
+                    "133703": {
+                        "name": "sasse187",
+                        "tag": "",
+                        "rank": 140,
+                        "score": 0,
+                        "kills": 0,
+                        "deaths": 0,
+                        "squad": 1,
+                        "role": 1
+                    }
+                }
+            },
+            "2": {
+                "faction": 2,
+                "players": {
+                    "133700": {
+                        "name": "Simetikk",
+                        "tag": "",
+                        "rank": 140,
+                        "score": 0,
+                        "kills": 0,
+                        "deaths": 0,
+                        "squad": 1,
+                        "role": 1
+                    },
+                    "133702": {
+                        "name": " KureFeather",
+                        "tag": "CCXE",
+                        "rank": 140,
+                        "score": 0,
+                        "kills": 0,
+                        "deaths": 0,
+                        "squad": 1,
+                        "role": 1
+                    }
+                }
+            }
+        }
+    }
+}

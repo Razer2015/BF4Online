@@ -1,0 +1,150 @@
+{
+  "lastUpdated": 1727106,
+  "snapshot": {
+    "status": "SUCCESS",
+    "gameId": 18014398529526761,
+    "gameMode": "ConquestLarge",
+    "mapVariant": 0,
+    "currentMap": "Levels/MP/MP_Journey/MP_Journey",
+    "maxPlayers": 14,
+    "waitingPlayers": 0,
+    "roundTime": 3746,
+    "defaultRoundTimeMultiplier": 150,
+    "conquest": {
+      "2": {
+        "tickets": 1670,
+        "ticketsMax": 2400
+      },
+      "1": {
+        "tickets": 1068,
+        "ticketsMax": 2400
+      }
+    },
+    "teamInfo": {
+      "0": {
+        "faction": 0,
+        "players": {}
+      },
+      "1": {
+        "faction": 0,
+        "players": {
+          "301629705": {
+            "name": "jureye",
+            "tag": "",
+            "rank": 140,
+            "score": 67080,
+            "kills": 0,
+            "deaths": 0,
+            "squad": 2,
+            "role": 1
+          },
+          "1005818679724": {
+            "name": "Dave12812",
+            "tag": "LAFT",
+            "rank": 93,
+            "score": 91480,
+            "kills": 0,
+            "deaths": 0,
+            "squad": 2,
+            "role": 1
+          },
+          "780142507": {
+            "name": "Pseudanthias",
+            "tag": "",
+            "rank": 140,
+            "score": 68725,
+            "kills": 0,
+            "deaths": 0,
+            "squad": 2,
+            "role": 1
+          },
+          "1005453198424": {
+            "name": "_PinkPanther66_",
+            "tag": "TiMe",
+            "rank": 140,
+            "score": 23390,
+            "kills": 0,
+            "deaths": 0,
+            "squad": 1,
+            "role": 1
+          },
+          "1005201683290": {
+            "name": "Rollicanoli",
+            "tag": "",
+            "rank": 15,
+            "score": 27810,
+            "kills": 0,
+            "deaths": 1,
+            "squad": 1,
+            "role": 1
+          },
+          "1005335703032": {
+            "name": "ensarfield",
+            "tag": "",
+            "rank": 106,
+            "score": 7235,
+            "kills": 0,
+            "deaths": 0,
+            "squad": 2,
+            "role": 1
+          }
+        }
+      },
+      "2": {
+        "faction": 0,
+        "players": {
+          "368001816": {
+            "name": "de32faad8420f45c",
+            "tag": "",
+            "rank": 39,
+            "score": 64130,
+            "kills": 0,
+            "deaths": 3,
+            "squad": 1,
+            "role": 1
+          },
+          "1733219101": {
+            "name": "p_r_v_l_z_d",
+            "tag": "",
+            "rank": 140,
+            "score": 79805,
+            "kills": 0,
+            "deaths": 1,
+            "squad": 1,
+            "role": 1
+          },
+          "1007124956792": {
+            "name": "kurvulja",
+            "tag": "",
+            "rank": 133,
+            "score": 58905,
+            "kills": 0,
+            "deaths": 2,
+            "squad": 1,
+            "role": 1
+          },
+          "1339991552": {
+            "name": "TheFirstTribes",
+            "tag": "PHY",
+            "rank": 114,
+            "score": 36910,
+            "kills": 0,
+            "deaths": 4,
+            "squad": 2,
+            "role": 1
+          },
+          "769846090": {
+            "name": "LiteXXII",
+            "tag": "PHY",
+            "rank": 121,
+            "score": 36575,
+            "kills": 0,
+            "deaths": 6,
+            "squad": 2,
+            "role": 1
+          }
+        }
+      }
+    }
+  }
+}

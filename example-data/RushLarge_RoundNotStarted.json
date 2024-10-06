@@ -1,0 +1,61 @@
+{
+  "lastUpdated": 1727106,
+  "snapshot": {
+    "status": "SUCCESS",
+    "gameId": 18014398529527500,
+    "gameMode": "RushLarge",
+    "mapVariant": 0,
+    "currentMap": "XP2/Levels/XP2_003/XP2_003",
+    "maxPlayers": 64,
+    "waitingPlayers": 0,
+    "roundTime": 0,
+    "defaultRoundTimeMultiplier": 300,
+    "teamInfo": {
+      "0": {
+        "faction": 0,
+        "players": {
+          "981982221": {
+            "name": "STARKILLER_gidf",
+            "tag": "",
+            "rank": 111,
+            "score": 0,
+            "kills": 0,
+            "deaths": 0,
+            "squad": 0,
+            "role": 1
+          }
+        }
+      },
+      "1": {
+        "faction": 0,
+        "players": {
+          "881499789": {
+            "name": "Airtightsky7",
+            "tag": "GAMR",
+            "rank": 117,
+            "score": 0,
+            "kills": 0,
+            "deaths": 0,
+            "squad": 1,
+            "role": 1
+          }
+        }
+      },
+      "2": {
+        "faction": 2,
+        "players": {
+          "1006685827644": {
+            "name": "ASADZDVZV",
+            "tag": "",
+            "rank": 18,
+            "score": 0,
+            "kills": 0,
+            "deaths": 0,
+            "squad": 1,
+            "role": 1
+          }
+        }
+      }
+    }
+  }
+}
