@@ -160,7 +160,7 @@ jobs:
         id: multiarch_build
         uses: docker/build-push-action@v5
         with:
-          context: ./publish
+          context: .
           platforms: linux/amd64,linux/arm64
           file: ./Dockerfile
           push: ${{ inputs.push }}
