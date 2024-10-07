@@ -1,11 +1,4 @@
-import {
-  gameModeToEnum,
-  gameServerMapModes,
-  getSquadLocale,
-  gameModeCategories,
-} from './warsawHelpers.mjs'
-
-import { get, multisort, toint, contains } from './surface.mjs'
+import { gameModeToEnum, gameServerMapModes } from './warsawHelpers.mjs'
 
 // {
 //     "lastUpdated": 1727106,
@@ -97,6 +90,8 @@ export const createScoreboardData = (recievedQueryInfo) => {
       switch (recievedQueryInfo.status) {
         // query support off
         case 'ERROR_RECVFROM_FAILED':
+          queryInfo.status = 'NOT_SUPPORTED'
+          break
         // protocol mismatch between server and client
         case 'ERROR_PROTOCOL_VERSION':
           queryInfo.status = 'NOT_SUPPORTED'
@@ -141,13 +136,13 @@ export const createScoreboardData = (recievedQueryInfo) => {
       if (result.timelimit !== 0 && result.defaultRoundTimeMultiplier !== 0) {
         result.timelimit *= result.defaultRoundTimeMultiplier
       }
-    } catch (e) {
+    } catch {
       result.roundTime = 0
       result.defaultRoundTimeMultiplier = 0
       result.timelimit = 0
     }
 
-    if (recievedQueryInfo.hasOwnProperty('conquest')) {
+    if (Object.prototype.hasOwnProperty.call(recievedQueryInfo, 'conquest')) {
       Object.entries(recievedQueryInfo['conquest']).forEach(
         ([teamId, teamInfo]) => {
           var team = { status: {}, players: [] }
@@ -164,7 +159,9 @@ export const createScoreboardData = (recievedQueryInfo) => {
           result.teams.push(team)
         }
       )
-    } else if (recievedQueryInfo.hasOwnProperty('deathmatch')) {
+    } else if (
+      Object.prototype.hasOwnProperty.call(recievedQueryInfo, 'deathmatch')
+    ) {
       Object.entries(recievedQueryInfo['deathmatch']).forEach(
         ([teamId, teamInfo]) => {
           var team = { status: {}, players: [] }
@@ -181,7 +178,9 @@ export const createScoreboardData = (recievedQueryInfo) => {
           result.teams.push(team)
         }
       )
-    } else if (recievedQueryInfo.hasOwnProperty('rush')) {
+    } else if (
+      Object.prototype.hasOwnProperty.call(recievedQueryInfo, 'rush')
+    ) {
       Object.entries(recievedQueryInfo['rush']).forEach(
         ([teamType, teamInfo]) => {
           var team = { status: {}, players: [] }
@@ -200,7 +199,9 @@ export const createScoreboardData = (recievedQueryInfo) => {
           result.teams.push(team)
         }
       )
-    } else if (recievedQueryInfo.hasOwnProperty('gunMaster')) {
+    } else if (
+      Object.prototype.hasOwnProperty.call(recievedQueryInfo, 'gunMaster')
+    ) {
       result.maxGunMasterLevel =
         recievedQueryInfo['gunMaster']['maxGunMasterLevel']
 
@@ -213,7 +214,9 @@ export const createScoreboardData = (recievedQueryInfo) => {
 
       result.teams.push(team1)
       result.teams.push(team2)
-    } else if (recievedQueryInfo.hasOwnProperty('captureTheFlag')) {
+    } else if (
+      Object.prototype.hasOwnProperty.call(recievedQueryInfo, 'captureTheFlag')
+    ) {
       Object.entries(recievedQueryInfo['captureTheFlag']).forEach(
         ([teamId, teamInfo]) => {
           var team = { status: {}, players: [] }
@@ -252,12 +255,14 @@ export const createScoreboardData = (recievedQueryInfo) => {
           result.teams.push(team)
         }
       )
-    } else if (recievedQueryInfo.hasOwnProperty('gunmaster')) {
+    } else if (
+      Object.prototype.hasOwnProperty.call(recievedQueryInfo, 'gunmaster')
+    ) {
       result.teams[0] = {
         status: { teamId: '0', highestLevel: 0 },
         players: [],
       }
-      Object.entries(recievedQueryInfo.teamInfo).forEach(([index, team]) => {
+      Object.entries(recievedQueryInfo.teamInfo).forEach(([, team]) => {
         Object.entries(team.players).forEach(([personaId, player]) => {
           player.gunMasterLevel =
             recievedQueryInfo.gunmaster[personaId + '_level']
@@ -273,7 +278,7 @@ export const createScoreboardData = (recievedQueryInfo) => {
       return queryInfo
     }
 
-    Object.entries(result.teams).forEach(([index, team]) => {
+    Object.entries(result.teams).forEach(([, team]) => {
       var teamDetails = recievedQueryInfo.teamInfo[team.status.teamId]
       if (teamDetails != null) {
         Object.entries(teamDetails['players']).forEach(
@@ -305,50 +310,4 @@ export const createScoreboardData = (recievedQueryInfo) => {
     queryInfo.status = 'INVALID_RESPONSE'
     return queryInfo
   }
-}
-
-const getFactionLabel = (faction) => {
-  switch (faction) {
-    case 0:
-      return 'US'
-    case 1:
-      return 'RU'
-    case 2:
-      return 'CN'
-    default:
-      return 'US'
-  }
-}
-
-/**
- * Get teams order
- * @param {Array} teams - Teams list
- * @param {Number} playerTeam - Own player team ID (if exists)
- */
-const getTeamsOrder = (teams, playerTeam) => {
-  let teamsList = teams
-  let teamsOrder = []
-
-  // Sort teams by score if more than 2 teams
-  if (teamsList.length > 2) {
-    teamsList = multisort(teamsList, 'score', 'desc')
-  }
-
-  // Add player team to the order if it exists
-  if (
-    typeof teamsList != 'undefined' &&
-    teamsList !== null &&
-    get(teams, playerTeam)
-  ) {
-    teamsOrder = [toint(playerTeam)]
-  }
-
-  // Add remaining teams to the order
-  teamsList.forEach((team) => {
-    if (!teamsOrder.includes(team.status.teamId)) {
-      teamsOrder.push(team.status.teamId)
-    }
-  })
-
-  return teamsOrder
 }

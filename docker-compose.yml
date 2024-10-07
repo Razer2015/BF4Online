@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "3111:3111"
+    # environment:
+    #   - NODE_ENV=production
+    #   - DISCORD_WEBHOOK_URL=${DISCORD_WEBHOOK_URL}
+    #   - DISCORD_BOT_NAME=${DISCORD_BOT_NAME}
+    #   - SERVER_GUID=${SERVER_GUID}
+    env_file:
+      - .env.docker
+    volumes:
+      - .:/app
+    command: npm start

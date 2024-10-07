@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "eslint --fix .",
     "start": "node src/index.mjs",
     "dev": "nodemon src/index.mjs"
   },
@@ -20,6 +21,13 @@
     "handlebars": "^4.7.8"
   },
   "devDependencies": {
+    "@eslint/compat": "^1.2.0",
+    "@eslint/eslintrc": "^3.1.0",
+    "@eslint/js": "^9.12.0",
+    "eslint": "^9.12.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prettier": "^5.2.1",
     "nodemon": "^3.1.7",
     "prettier": "^3.3.3"
   }

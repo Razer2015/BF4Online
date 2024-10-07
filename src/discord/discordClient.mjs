@@ -1,26 +1,25 @@
-import axios from 'axios'
 import { promises as fs } from 'fs'
 import path from 'path'
-import { fileURLToPath } from 'url'
+
+import axios from 'axios'
 import dotenv from 'dotenv'
 import FormData from 'form-data'
+
 import { getTeamInfo } from '../helpers/warsawHelpers.mjs'
+import { getAppDataPath } from '../helpers/pathHelpers.mjs'
 
 // Load environment variables from .env file
 dotenv.config()
-
-// Get the current directory name
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
 
 // Define the Discord webhook URL from environment variables
 const webhookUrl = process.env.DISCORD_WEBHOOK_URL
 const botName = process.env.DISCORD_BOT_NAME || 'BF4Online'
 
-const cacheFilePath = path.join(__dirname, 'serverCache.json')
+const cacheFilePath = path.join(getAppDataPath(), 'serverCache.json')
 
 // Upsert the image to the Discord webhook
 export async function upsertImageToWebhook({
+  request,
   serverGuid,
   snapshot,
   matchInfo,
@@ -32,17 +31,20 @@ export async function upsertImageToWebhook({
     let messageId
     try {
       const messageIds = JSON.parse(
-        (await fs.readFile(path.join(__dirname, 'messageId.json'), 'utf8')) ||
-          '{}'
+        (await fs.readFile(
+          path.join(getAppDataPath(), 'messageId.json'),
+          'utf8'
+        )) || '{}'
       )
       messageId = messageIds[serverGuid]
     } catch (error) {
-      console.error('Error reading messageId file:', error)
+      request.log.error({ err: error }, 'Error reading messageId file')
     }
 
     if (messageId) {
       // Update the image in the Discord webhook
       await updateImageInWebhook({
+        request,
         messageId,
         serverGuid,
         snapshot,
@@ -53,6 +55,7 @@ export async function upsertImageToWebhook({
     } else {
       // Send the image to the Discord webhook
       await sendImageToWebhook({
+        request,
         serverGuid,
         snapshot,
         matchInfo,
@@ -61,12 +64,13 @@ export async function upsertImageToWebhook({
       })
     }
   } catch (error) {
-    console.error('Error upserting image:', error)
+    request.log.error({ err: error }, 'Error upserting image')
   }
 }
 
 // Send the Discord webhook
 async function sendImageToWebhook({
+  request,
   serverGuid,
   snapshot,
   matchInfo,
@@ -81,6 +85,7 @@ async function sendImageToWebhook({
       'payload_json',
       JSON.stringify(
         await generateScoreboardBody({
+          request,
           serverGuid,
           snapshot,
           matchInfo,
@@ -97,20 +102,22 @@ async function sendImageToWebhook({
     })
 
     // Save the message id to file
-    await saveMessageId(serverGuid, response.data.id)
+    await saveMessageId({ request, serverGuid, messageId: response.data.id })
 
-    console.log('Image sent successfully:', response.data)
+    request.log.info('Image sent successfully')
+    request.log.debug(response.data)
   } catch (error) {
     if (error.response?.data) {
-      console.error('Error sending image:', error.response.data)
+      request.log.error({ err: error.response.data }, 'Error sending image')
     } else {
-      console.error('Error sending image:', error)
+      request.log.error({ err: error }, 'Error sending image')
     }
   }
 }
 
 // Update the Discord webhook
 async function updateImageInWebhook({
+  request,
   messageId,
   serverGuid,
   snapshot,
@@ -126,6 +133,7 @@ async function updateImageInWebhook({
       'payload_json',
       JSON.stringify(
         await generateScoreboardBody({
+          request,
           serverGuid,
           snapshot,
           matchInfo,
@@ -145,11 +153,13 @@ async function updateImageInWebhook({
       }
     )
 
-    console.log('Image updated successfully:', response.data)
+    request.log.info('Image updated successfully')
+    request.log.debug(response.data)
   } catch (error) {
     // If the message was not found, send a new message
     if (error.response?.status === 404) {
       await sendImageToWebhook({
+        request,
         serverGuid,
         snapshot,
         matchInfo,
@@ -160,14 +170,15 @@ async function updateImageInWebhook({
     }
 
     if (error.response?.data) {
-      console.error('Error updating image:', error.response.data)
+      request.log.error({ err: error.response.data }, 'Error updating image')
     } else {
-      console.error('Error updating image:', error)
+      request.log.error({ err: error }, 'Error updating image')
     }
   }
 }
 
 async function generateScoreboardBody({
+  request,
   serverGuid,
   snapshot,
   matchInfo,
@@ -194,12 +205,14 @@ async function generateScoreboardBody({
     }
   })
 
-  const serverName = await fetchServerName(serverGuid)
+  const serverName = await fetchServerName({ request, serverGuid })
 
   return {
     username: botName,
     content: serverGuid
-      ? serverName ? `[${serverName}](https://battlelog.battlefield.com/bf4/servers/show/pc/${serverGuid})` : `https://battlelog.battlefield.com/bf4/servers/show/pc/${serverGuid}`
+      ? serverName
+        ? `[${serverName}](https://battlelog.battlefield.com/bf4/servers/show/pc/${serverGuid})`
+        : `https://battlelog.battlefield.com/bf4/servers/show/pc/${serverGuid}`
       : '',
     embeds: [
       {
@@ -242,20 +255,23 @@ async function generateScoreboardBody({
   }
 }
 
-async function saveMessageId(serverGuid, messageId) {
+async function saveMessageId({ request, serverGuid, messageId }) {
   try {
     const messageIds = JSON.parse(
-      (await fs.readFile(path.join(__dirname, 'messageId.json'), 'utf8')) ||
-        '{}'
+      (await fs.readFile(
+        path.join(getAppDataPath(), 'messageId.json'),
+        'utf8'
+      )) || '{}'
     )
     messageIds[serverGuid] = messageId
     await fs.writeFile(
-      path.join(__dirname, 'messageId.json'),
+      path.join(getAppDataPath(), 'messageId.json'),
       JSON.stringify(messageIds)
     )
-    console.log('Message ID saved successfully')
+
+    request.log.info(`Message ID ${messageId} for server ${serverGuid} saved`)
   } catch (error) {
-    console.error('Error saving message ID:', error)
+    request.log.error({ err: error }, 'Error saving message ID')
   }
 }
 
@@ -272,14 +288,14 @@ function getTotalPlayers(scoreboardData, teamInfo) {
   }
 }
 
-async function fetchServerName(serverGuid) {
+async function fetchServerName({ request, serverGuid }) {
   const cacheDuration = 3600000 // 1 hour in milliseconds
   let cache = {}
 
   try {
     cache = JSON.parse((await fs.readFile(cacheFilePath, 'utf8')) || '{}')
   } catch (error) {
-    console.error('Error reading cache file:', error)
+    request.log.error({ err: error }, 'Error reading cache file')
   }
 
   const cachedData = cache[serverGuid]
@@ -304,7 +320,7 @@ async function fetchServerName(serverGuid) {
 
     return serverName
   } catch (error) {
-    console.error('Error fetching server name:', error)
+    request.log.error({ err: error }, 'Error fetching server name')
     throw error
   }
 }

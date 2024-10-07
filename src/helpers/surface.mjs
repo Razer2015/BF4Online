@@ -45,7 +45,7 @@ export const get = (obj, key, def) => {
     } else {
       result = obj[key]
     }
-  } catch (e) {
+  } catch {
     result = def
   }
   /* To comply with python behavior, we should return null instead of undefined */
@@ -159,6 +159,7 @@ export const multisort = (array, ...args) => {
       // Put undefined and null values last, just like cmp in Python
       if (typeof y === 'undefined' || y === null) {
         if (typeof x === 'undefined' || x === null) {
+          // Intentionally left empty
         } else {
           return 1
         }
