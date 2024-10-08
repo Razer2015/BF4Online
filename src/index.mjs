@@ -11,8 +11,13 @@ import {
   formatForScoreboardTemplate,
 } from './helpers/warsawHelpers.mjs'
 import './handlebar-helpers.mjs'
-import { upsertImageToWebhook } from './discord/discordClient.mjs'
+import { upsertToWebhook } from './discord/discordClient.mjs'
 import { getAppDataPath, getTemplatePath } from './helpers/pathHelpers.mjs'
+import {
+  getServerSnapshotByGuid,
+  getScoreboardData,
+  generateScoreboardImage,
+} from './battlelog/client.mjs'
 
 // Load environment variables from .env file
 dotenv.config()
@@ -35,40 +40,40 @@ const scoreboardTemplateContent = await fs.readFile(
 const scoreboardTemplate = Handlebars.compile(scoreboardTemplateContent)
 
 fastify.post('/render', async (request, reply) => {
-  const { snapshot } = request.body
-
-  // Check exports.createLiveScoreboardData from battlelog bundles for more information
-
-  const scoreboardData = createScoreboardData(snapshot)
-  // console.log(scoreboardData)
-  // console.log(JSON.stringify(scoreboardData))
-  // console.log()
-  // console.log(getMatchInformation(scoreboardData))
-
-  // console.log(
-  //   JSON.stringify(scoreboardData)
-  // )
-
-  const matchInfo = getMatchInformation(scoreboardData)
-  const formattedScoreboardData = formatForScoreboardTemplate(
-    scoreboardData.result
-  )
-
-  // console.log(matchInfo, JSON.stringify(formattedScoreboardData))
-
-  const rendered = scoreboardTemplate({
-    matchInfo,
-    data: formattedScoreboardData,
-  })
-
-  // const rendered = scoreboardTemplate({
-  //   scoreboard: scoreboardData.result || {},
-  //   matchInfo: getMatchInformation(scoreboardData),
-  // })
-
-  //   reply.send(rendered)
-
   try {
+    const { snapshot } = request.body
+
+    // Check exports.createLiveScoreboardData from battlelog bundles for more information
+
+    const scoreboardData = createScoreboardData(snapshot)
+    // console.log(scoreboardData)
+    // console.log(JSON.stringify(scoreboardData))
+    // console.log()
+    // console.log(getMatchInformation(scoreboardData))
+
+    // console.log(
+    //   JSON.stringify(scoreboardData)
+    // )
+
+    const matchInfo = getMatchInformation(scoreboardData)
+    const formattedScoreboardData = formatForScoreboardTemplate(
+      scoreboardData.result
+    )
+
+    // console.log(matchInfo, JSON.stringify(formattedScoreboardData))
+
+    const rendered = scoreboardTemplate({
+      matchInfo,
+      data: formattedScoreboardData,
+    })
+
+    // const rendered = scoreboardTemplate({
+    //   scoreboard: scoreboardData.result || {},
+    //   matchInfo: getMatchInformation(scoreboardData),
+    // })
+
+    //   reply.send(rendered)
+
     const response = await axios.post(
       `${imageApiUrl}/api/html/render?element=%23server-players-list`,
       rendered,
@@ -96,60 +101,54 @@ fastify.post('/render', async (request, reply) => {
 })
 
 fastify.post('/renderByGuid/:guid', async (request, reply) => {
-  const { guid } = request.params
-  const { returnImage } = request.query
-
-  // Get the snapshot from Battlelog https://keeper.battlelog.com/snapshot/:guid
-  const snapshotResponse = await axios.get(
-    `https://keeper.battlelog.com/snapshot/${guid}`
-  )
-
-  // If status is not 200, return the error
-  if (snapshotResponse.status !== 200) {
-    return reply.status(snapshotResponse.status).send(snapshotResponse.data)
-  }
-
-  const snapshot = snapshotResponse.data.snapshot
-  const scoreboardData = createScoreboardData(snapshot)
-
-  const matchInfo = getMatchInformation(scoreboardData)
-  const formattedScoreboardData = formatForScoreboardTemplate(
-    scoreboardData.result
-  )
-  const rendered = scoreboardTemplate({
-    matchInfo,
-    data: formattedScoreboardData,
-  })
-
   try {
-    const response = await axios.post(
-      `${imageApiUrl}/api/html/render?element=%23server-players-list`,
-      rendered,
-      {
-        headers: {
-          'Content-Type': 'text/plain',
-        },
-        responseType: 'arraybuffer',
-      }
-    )
+    const { guid } = request.params
 
-    upsertImageToWebhook({
+    const snapshotResponse = await getServerSnapshotByGuid(guid)
+
+    // If status is not 200, return the error
+    if (snapshotResponse.status !== 200) {
+      return reply.status(snapshotResponse.status).send(snapshotResponse.data)
+    }
+
+    const snapshot = snapshotResponse.data.snapshot
+    const { matchInfo, scoreboardData } = await getScoreboardData(snapshot)
+    const image = await generateScoreboardImage(matchInfo, scoreboardData)
+
+    reply.type('image/png').send(image)
+  } catch (err) {
+    fastify.log.error(err)
+    reply.status(500).send({ error: 'Failed to post data' })
+  }
+})
+
+fastify.post('/server/:guid/discord/:dataType', async (request, reply) => {
+  try {
+    const { guid, dataType } = request.params
+
+    const snapshotResponse = await getServerSnapshotByGuid(guid)
+
+    // If status is not 200, return the error
+    if (snapshotResponse.status !== 200) {
+      return reply.status(snapshotResponse.status).send(snapshotResponse.data)
+    }
+
+    const snapshot = snapshotResponse.data.snapshot
+    const { matchInfo, scoreboardData } = await getScoreboardData(snapshot)
+
+    upsertToWebhook({
       request,
       serverGuid: guid,
       snapshot: snapshot,
       matchInfo,
-      scoreboardData: formattedScoreboardData,
-      image: response.data,
+      scoreboardData: scoreboardData,
+      dataType,
     })
 
-    if (returnImage === 'true') {
-      reply.type('image/png').send(response.data)
-    } else {
-      reply.status(200).send({ message: 'OK' })
-    }
+    reply.status(200).send({ message: 'OK' })
   } catch (err) {
     fastify.log.error(err)
-    reply.status(500).send({ error: 'Failed to render image' })
+    reply.status(500).send({ error: 'Failed to post data' })
   }
 })
 
